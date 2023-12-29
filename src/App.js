@@ -17,26 +17,24 @@ function App() {
  <header className="App-header">
            <nav>
               <a href="https://www.linkedin.com/in/christopherpdesmond/"> about </a> 
-              <button>light/dark mode</button>   
+              <button>☀️</button>   
             </nav>
         <div className="header-content">
           <h2>Habbit!</h2>
           <img src={frog_emoji} alt="frog_emoji" width="128" height="128" />
         </div>
-        <p>Daily Habbit Tracker</p>
+        <p>Daily Habit Tracker</p>
         <p>Welcome back - *name*</p>
       <div className = "Date and time">
-      <p>-----------------------</p>
+     <hr className = 'solidline'></hr>
         <DateTime></DateTime>
         </div>
         <div className="container mt-5">
       <h2 className="mb-4">Habbits</h2>
       <DynamicCheckbox />
     </div>
-    <img src={'./frog_emoji_2.png'} alt="frog_emoji"/>
-
+    <img src={'./frog streak.png'} alt="frog_emoji"/>
     </header>
-
     </div>
   );
 }

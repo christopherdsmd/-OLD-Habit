@@ -21,6 +21,7 @@ const DynamicCheckbox = () => {
     };
     fetchData(API);
   }, []);
+  
   const chooseCheckbox = (e: React.ChangeEvent<HTMLInputElement>) => {
     const id = parseInt(e.target.value);
     if (dataId.includes(id)) {
