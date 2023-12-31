@@ -2,15 +2,20 @@ import React from "react";
 
 const DateTime = () => {
   var showdate = new Date();
-  var options = { month: 'long', day: 'numeric', year: 'numeric' };
+  var options = { 
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+    weekday: 'long', 
+  };
 
   var displaytodaysdate = showdate.toLocaleDateString('en-US', options);
-  var dt=showdate.toDateString();
+  var dt = showdate.toDateString();
 
   return (
     <div>
       <center>
-        {dt}
+        {displaytodaysdate}
       </center>
     </div>
   );

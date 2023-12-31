@@ -45,34 +45,39 @@ const addHabit = () =>
     );
     setUsers(newList);
   };
+
+const DailyCheck = () => 
+{
+  
+}
+
   return (
     <div style={styles.container}>
-      <button style={styles.addbutton} onClick={addHabit}>add new habit ➕</button>   
+    
       {users.length === 0 && <h4> No Habits yet...</h4>}
       {users.length > 0 &&
         users.map((item: any) => (
-          <div style={styles.checkbox} key={item.id}>
+          <div key={item.id} style={styles.checkbox}>
+            <button style={styles.rmbutton} onClick={remove}>
+              🗑️
+            </button>
             <span style={styles.first_name}>{item.first_name}</span>
-            <button style={styles.rmbutton} onClick={remove}> 
-      🗑️
-      </button>
             <span>
               <input
-                type="checkbox"
+                type="button"
                 value={item.id}
                 onChange={chooseCheckbox}
-                checked={dataId.includes(item.id) ? true : false}
+                onClick={DailyCheck}
               />
             </span>
           </div>
         ))}
-      <button style={styles.rmbutton} onClick={remove}> 
-      🗑️
+          <button style={styles.addbutton} onClick={addHabit}>
+        add new habit ➕
       </button>
     </div>
   );
 };
-
 
 const styles: { [key: string]: React.CSSProperties } = {
   container: {
@@ -114,10 +119,11 @@ addbutton:
   rmbutton: {
     marginTop: 15,
     color: '#ffffff',
-    width: '100%',
+    width: '50%',
     cursor: 'pointer',
-    padding: '15px 30px',
-    border: 'none',
+    padding: '5px 5px',
+    alignItems: 'right',
+
     fontWeight: 'bold',
     backgroundColor: 'red',
   },
