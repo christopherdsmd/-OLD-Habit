@@ -9,6 +9,13 @@ export function getDailyRandomInt() {
   return Math.floor(random * 198);
 }
 
+export function getSeed() 
+{
+  const date = new Date();
+  const seed = date.toISOString().slice(0, 10); // Use the date as a seed , date. returns date 
+  return seed;
+}
+
 // Function to hash the seed
 function hashCode(str) {
   let hash = 0;

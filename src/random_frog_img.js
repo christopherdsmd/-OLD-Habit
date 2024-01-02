@@ -1,5 +1,5 @@
 import App from './App.js';
-import { getRandomInt } from './randomNumber.jsx';
+import { getRandomInt } from './DailyrandomNumber.jsx';
 
 const imagePaths = [];
 
@@ -18,10 +18,12 @@ export function lightDarkmode()
 {
 var appHeader = document.querySelector('.App-header');
 
-if(appHeader.style.backgroundColor === 'rgb(15, 14, 17)') //black 
+if(appHeader)
+if(appHeader.style.backgroundColor === 'rgb(15, 14, 17)') //black - default
 {
   appHeader.style.backgroundColor = 'rgb(255, 255, 255)'    //white
   appHeader.style.color = 'rgb(15, 14, 17)' 
+  
 } else 
 {
   appHeader.style.backgroundColor = 'rgb(15, 14, 17)';

@@ -37,7 +37,9 @@
 .App-header nav {
   text-align: right;
   width: 95%; /* Make the nav take up the full width */
-}
+}  
+
+
 
 .header-content {
   display: flex;
@@ -53,3 +55,14 @@
     transform: rotate(360deg);
   }
 }
+
+
+.App-header button {
+
+  border: none;
+  cursor: pointer;
+  appearance: none;
+  background-color: inherit;
+ 
+}
+
